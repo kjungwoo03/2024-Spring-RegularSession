@@ -1,3 +1,5 @@
+## CNN Assignment Leaderboard
+
 | Rank | Name  | Accuracy |
 | ---- | ----  | -------- |
 | 1 | 신재우 |  99.17% |
