@@ -69,32 +69,32 @@ A. Train dataset에’만’ 적용되어야합니다.
 
 ### 문제 3.
 
-Q. CustomImageDataset과 DataLoader 클래스의 차이점에 대해서 설명해주세요.
+Q. `CustomImageDataset`과 `DataLoader` 클래스의 차이점에 대해서 설명해주세요.
 
 - (힌트 : 두 클래스의 리턴 형식에 어떤 차이가 있나요? 어디서부터 Batch 단위로 리턴되나요?)
 
 A. 모범답안 : `10기 유현동`
 
-- CustomImageDataset 클래스는 주로 이미지 파일을 읽고 전처리하여 모델에 입력으로 공급할 수 있는 형태로 데이터를 제공합니다.각 샘플은 이미지와 해당 이미지의 라벨로 구성됩니다.
-- DataLoader 클래스는 데이터셋을 미니배치로 나누고 셔플링 및 병렬로 데이터를 로드하는 데 사용됩니다.
-- 따라서 CustomImageDataset 클래스는 데이터셋을 정의하고 데이터셋에 대한 개별 샘플을 가져오는 데 사용되고, DataLoader 클래스는 데이터셋을 미니배치 단위로 로드하고 셔플링하여 모델에 제공하는 데 사용됩니다.
+- `CustomImageDataset` 클래스는 주로 이미지 파일을 읽고 전처리하여 모델에 입력으로 공급할 수 있는 형태로 데이터를 제공합니다.각 샘플은 이미지와 해당 이미지의 라벨로 구성됩니다.
+- `DataLoader` 클래스는 데이터셋을 미니배치로 나누고 셔플링 및 병렬로 데이터를 로드하는 데 사용됩니다.
+- 따라서 `CustomImageDataset` 클래스는 데이터셋을 정의하고 데이터셋에 대한 개별 샘플을 가져오는 데 사용되고, `DataLoader` 클래스는 데이터셋을 미니배치 단위로 로드하고 셔플링하여 모델에 제공하는 데 사용됩니다.
 
 ### 문제 4.
 
 Q. 주어진 과제는 Binary Classification 태스크입니다.
 
 - 이중 분류를 위해서는 손실함수로 Binary Cross Entropy를 사용한다고 세션에서 배웠습니다.
-- PyTorch에는 Binary Cross Entropy를 학습에 사용할 수 있는 2가지 방법이 있는데요, 'nn.BCELoss'와 'nn.BCEWithLogitsLoss'입니다.
+- PyTorch에는 Binary Cross Entropy를 학습에 사용할 수 있는 2가지 방법이 있는데요, `nn.BCELoss`와 `nn.BCEWithLogitsLoss`입니다.
 - 이 둘은 같아 보이지만 구현상에서 명백한 차이점이 있습니다. 이 둘의 차이점에 대해서 서술해주세요.
 
 A. 모범답안 : `11기 남예진`
 
-- nn.BCELoss : 이진분류를 위한 binary cross entropy 손실함수이다. 이 함수를 사용할 때는 모델의 출력이 0과 1 사이의 확률값이 되도록 해야 한다. 즉, 모델의 마지막 레이어에서 sigmoid 활성화 함수를 적용해야 합니다. (Sigmoid를 씌우지 않은 모델의 출력값은 Logit값이기 때문입니다)
-- nn.BCEWithLogitsLoss : nn.BCELoss와 기본적으로 동일한 이진분류 binary cross entropy 손실함수이지만, 시그모이드 함수를 내부적으로 적용됩니다. 따라서 모델의 출력에서 시그모이드 함수를 별도로 적용할 필요가 없습니다. nn.BCEwithLogitsLoss는 로짓과 함께 시그모이드 함수를 계산함으로써 수치적 안정성을 높일 수 있습니다.
+- `nn.BCELoss` : 이진분류를 위한 binary cross entropy 손실함수입니다. 이 함수를 사용할 때는 모델의 출력이 0과 1 사이의 확률값이 되도록 해야 합니다. 즉, 모델의 마지막 레이어에서 sigmoid 활성화 함수를 적용해야 합니다. (Sigmoid를 씌우지 않은 모델의 출력값은 Logit값이기 때문입니다)
+- `nn.BCEWithLogitsLo`ss : `nn.BCELoss`와 기본적으로 동일한 이진분류 binary cross entropy 손실함수이지만, 시그모이드 함수를 내부적으로 적용합니다. 따라서 모델의 출력에서 시그모이드 함수를 별도로 적용할 필요가 없습니다. `nn.BCEwithLogitsLoss`는 로짓과 함께 시그모이드 함수를 계산함으로써 수치적 안정성을 높일 수 있습니다.
 
 ### 문제 5.
 
-Q. 학습이 끝난 이후 val_loss, train_loss 변화 추이 그래프와 val_acc, train_acc 변화 추이 그래프를 첨부해주세요.
+Q. 학습이 끝난 이후 `val_loss`, `train_loss` 변화 추이 그래프와 `val_acc`, `train_acc` 변화 추이 그래프를 첨부해주세요.
 
 A.
 
