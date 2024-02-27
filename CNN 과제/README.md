@@ -104,6 +104,6 @@ A. W/ Augmentation (진한 실선) VS No Augmentation (흐린 점선)
 
 - <img width="1364" alt="스크린샷 2024-02-20 오후 7 23 15" src="https://github.com/DataScience-Lab-Yonsei/2024-Spring-RegularSession/assets/98018819/06f19469-19c5-4679-98dc-7282d8d9dea4">
 
-    - 함께 비슷한 수준을로 수렴해나가는 Augmentation이 적용된 모델과는 달리, Augmentation이 적용되지 않은 모델은 급격히 줄어든 Train loss에 비해 Validation loss는 수렴하지 않는, 과적합된 모습을 볼 수 있습니다.
+    - 함께 비슷한 수준으로 수렴해나가는 Augmentation이 적용된 모델과는 달리, Augmentation이 적용되지 않은 모델은 급격히 줄어든 Train loss에 비해 Validation loss는 수렴하지 않는, 과적합된 모습을 볼 수 있습니다.
     - 간혹 Augmentation을 적용시키지 않은 경우가 더 작은 Loss를 보인 경우가 있는데, 이 경우 학습을 더 길게 진행시켰을 경우 Augmentation을 적용시킨 모델이 더 작은 Loss를 가지게 될 여지가 있습니다. Augmentation을 적용시키지 않은 모델의 경우, 매 Epoch 마다, 변형되지 않은, 동일한 데이터를 보기 때문에 연산량이 적고 최적화 난이도가 작은 Epoch에서는 비교적 쉬울 수 있기 때문입니다.
     - 이와 같이 Validation Dataset을 이용하면 실시간으로 모델의 학습상황을 모니터링하고, 학습 진행/중단 여부 및 하이퍼 파라미터 튜닝 등의 판단을 내릴 수 있습니다.
