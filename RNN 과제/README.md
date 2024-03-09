@@ -1,1 +1,1 @@
-[View the project PDF](RNN+Transformers 과제.pdf)
+[View the project PDF](RNN+Transformers과제.pdf)
